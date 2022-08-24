@@ -45,6 +45,9 @@ class _LoginPageState extends State<LoginPage> {
             ))),
             Spacer(),
             ButtonLogin(
+              onTap: (){
+                Navigator.of(context).pushNamed("register");
+              },
               width: width,
                backgroundColor: Colors.white,
                 borderColor: R.colors.fourth,
@@ -71,14 +74,15 @@ class _LoginPageState extends State<LoginPage> {
 class ButtonLogin extends StatelessWidget {
   const ButtonLogin({
     Key? key,
-    required this.width, required this.backgroundColor, required this.child, required this.borderColor,
+    required this.width, required this.backgroundColor, required this.child, required this.borderColor, required this.onTap,
   }) : super(key: key);
 
   final Color backgroundColor;
   final Widget child;
   final Color borderColor;
   final double width;
-
+  final Function()? onTap;
+  
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -86,7 +90,7 @@ class ButtonLogin extends StatelessWidget {
       child: Center(
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            elevation: 0,
+            elevation: 2,
             primary: backgroundColor ,
             fixedSize: Size(width*0.8, 50),
             shape: RoundedRectangleBorder(
@@ -94,7 +98,7 @@ class ButtonLogin extends StatelessWidget {
               side: BorderSide(color:borderColor )
             )
           ),
-          onPressed: (){}, 
+          onPressed: onTap, 
           child: child 
           ),
       ),

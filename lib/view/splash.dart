@@ -10,7 +10,7 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Timer(Duration(seconds:5),(){
-      Navigator.of(context).pushNamed("login");
+      Navigator.of(context).pushReplacementNamed("login");
     });
     return Scaffold(
       backgroundColor: R.colors.dark,
