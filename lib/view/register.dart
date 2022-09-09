@@ -53,7 +53,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         crossAxisAlignment:CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(5),
                             child: Text("Sign Up",
                             style:GoogleFonts.poppins(
                               fontSize:24,
@@ -173,7 +173,7 @@ class FormRegist extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.symmetric(vertical: 10),
+      padding:  EdgeInsets.symmetric(vertical: 5),
       child: Center(
         child: Container(
          width: width*0.8,

@@ -7,4 +7,5 @@ class AppColor {
   Color fourth = Color(0xffB6A50B);
   Color next = Color(0xffA3ACAB);
   Color dark = Color(0xff2C3639);
+  Color neon = Color(0xffFEDB39);
 }
